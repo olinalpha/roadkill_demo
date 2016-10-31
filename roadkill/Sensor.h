@@ -2,8 +2,8 @@
 #define __SENSOR_H__
 
 #include <Arduino.h>
-#define nullptr NULL
 
+#include "Utils.h"
 enum {
     ANALOG, DIGITAL};
 
@@ -39,12 +39,7 @@ struct Sensor{
     void print(){
         Serial.print(name);
         Serial.print(" : ");
-        for(int i=0; i<n; ++i){
-            Serial.print(vals[i]);
-            if(i != n-1)
-                Serial.print(',');
-        } 
-        Serial.print('\n');
+		printN(vals, n);
     }
 };
 #endif

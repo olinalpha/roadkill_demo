@@ -25,7 +25,6 @@ struct BehaviorLights{
             lights[i].setBrightness(0); // default dark
         }
 
-
     }
 
 
@@ -92,6 +91,7 @@ struct BehaviorLights{
     }
 
     void set(char _mode){
+        cnt = 0;
         mode = _mode;
     }
 
